@@ -10,7 +10,7 @@ form && form.addEventListener('submit', (e) => {
         toast.classList.add("show");
         setTimeout(function () {
             toast.classList.remove("show");
-            window.location.assign("poema.html")
+            window.location.assign("pages/poema.html")
         }, 5000);
     }
 });
