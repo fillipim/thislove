@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_container {
+    width: 100;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+}
+
+main {
+    padding: 1rem;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilizando o botão */
+button {
+    background: #ffc400;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilizando o botão quando o mouse passa por cima */
+button:hover {
+    background: #eeb702;
+}
+
+h2 {
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+h1,
+p,
+button {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #fff;
+}
+
+p {
+    font-size: larger;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    z-index: 999;
+    padding: 1rem;
+    width: 100%;
+}
+
+.toast {
+    background-color: #01bfa6;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 99;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+p {
+    transition: all .1s;
+    opacity: 0;
+}
+
+.show-text {
+    opacity: 1;
+}
